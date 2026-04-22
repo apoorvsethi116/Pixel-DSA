@@ -5,8 +5,8 @@ Users can create an account, log in, solve coding problems, earn XP, and build a
 
 ## Live Demo
 
-- Frontend: https://your-frontend-url.vercel.app
-- Backend API: https://your-backend-url.onrender.com
+- Frontend: https://pixel-dsa.vercel.app/
+- Backend API: https://pixel-dsa.onrender.com/
 
 Update both links after deployment.
 
