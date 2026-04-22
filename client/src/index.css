@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #12121a;
+  --border: #2a2a40;
+  --green: #00ff88;
+  --purple: #bf5fff;
+  --yellow: #ffd700;
+  --red: #ff4466;
+  --text: #e0e0e0;
+  --muted: #555570;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 10px;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* Pixel-border utility */
+.pixel-box {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0px var(--border);
+  padding: 16px;
+}
+
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  padding: 10px 16px;
+  border: 2px solid;
+  cursor: pointer;
+  transition: transform 0.05s, box-shadow 0.05s;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.btn:active { transform: translate(2px, 2px); box-shadow: none !important; }
+
+.btn-green {
+  background: transparent;
+  color: var(--green);
+  border-color: var(--green);
+  box-shadow: 3px 3px 0 var(--green);
+}
+.btn-green:hover { background: var(--green); color: var(--bg); }
+
+.btn-purple {
+  background: transparent;
+  color: var(--purple);
+  border-color: var(--purple);
+  box-shadow: 3px 3px 0 var(--purple);
+}
+.btn-purple:hover { background: var(--purple); color: var(--bg); }
+
+.btn-red {
+  background: transparent;
+  color: var(--red);
+  border-color: var(--red);
+  box-shadow: 3px 3px 0 var(--red);
+}
+.btn-red:hover { background: var(--red); color: var(--bg); }
+
+input {
+  width: 100%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  color: var(--text);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  padding: 10px 12px;
+  outline: none;
+  margin-bottom: 12px;
+}
+input:focus { border-color: var(--green); }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* Difficulty badges */
+.badge {
+  font-size: 7px;
+  padding: 3px 7px;
+  border: 1px solid;
+  display: inline-block;
+}
+.badge-Easy { color: var(--green); border-color: var(--green); }
+.badge-Medium { color: var(--yellow); border-color: var(--yellow); }
+.badge-Hard { color: var(--red); border-color: var(--red); }
+
+/* XP Bar */
+.xp-bar-wrap {
+  background: var(--border);
+  height: 12px;
+  border: 2px solid var(--muted);
+  margin-top: 8px;
+}
+.xp-bar-fill {
+  height: 100%;
+  background: var(--purple);
+  transition: width 0.4s ease;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  border-bottom: 2px solid var(--border);
+  background: var(--surface);
+}
+.navbar .logo { color: var(--green); font-size: 13px; letter-spacing: 1px; }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 8px;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--green); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); }
