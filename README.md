@@ -159,5 +159,4 @@ Recommended future improvements:
 ## Author
 
 - Name: Apoorv Sethi
-- GitHub: https://github.com/<your-username>
-- LinkedIn: https://www.linkedin.com/in/<your-linkedin>
+- LinkedIn: [https://www.linkedin.com/in/<your-linkedin>](https://www.linkedin.com/in/apoorv-sethi/)
